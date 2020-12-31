@@ -1,18 +1,6 @@
 # Xcode
-#
-# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
-
-## User settings
-xcuserdata/
-
-## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
-*.xcscmblueprint
-*.xccheckout
-
-## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
 build/
-DerivedData/
-*.moved-aside
+.build/
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -21,70 +9,75 @@ DerivedData/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
-
-## Obj-C/Swift specific
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
 *.hmap
-
-## App packaging
 *.ipa
-*.dSYM.zip
-*.dSYM
+*.xcuserstate
+*.xcscmblueprint
 
-## Playgrounds
-timeline.xctimeline
-playground.xcworkspace
+/fastlane/scripts/upload.sh
+/fastlane/README.md
+# fastlane temporary profiling data
+/fastlane/report.xml
+# deliver temporary error output
+/fastlane/Error*.png
+# deliver temporary preview output
+/fastlane/Preview.html
+# snapshot generated screenshots
+/fastlane/screenshots
+/fastlane/screenshots/*/*-portrait.png
+/fastlane/screenshots/*/*-landscape.png
+/fastlane/screenshots/screenshots.html
+# frameit generated screenshots
+/fastlane/screenshots/*/*-portrait_framed.png
+/fastlane/screenshots/*/*-landscape_framed.png
+# folders for storing builds and prov profiles
+/builds
+/provisioning-profiles
+/assets
+#build tools
+/fastlane/Appfile
+/fastlane/Snapfile
+/fastlane/SnapshotHelper.swift
+/fastlane/frames
+/fastlane/scripts
+/fastlane/templates
 
-# Swift Package Manager
-#
-# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
-# Packages/
-# Package.pins
-# Package.resolved
-# *.xcodeproj
-#
-# Xcode automatically generates this directory with a .xcworkspacedata file and xcuserdata
-# hence it is not needed unless you have added a package configuration file to your project
-# .swiftpm
+# content blocking lists
+content-blocker-lib-ios/Lists/*
 
-.build/
+#python environment
+python-env/
 
-# CocoaPods
-#
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
-#
-# Pods/
-#
-# Add this line if you want to avoid checking in source code from the Xcode workspace
-# *.xcworkspace
+# OS X
+.DS_Store
 
-# Carthage
-#
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
+# Vim
+*~
+.*.sw*
 
-Carthage/Build/
+# IDEA
+.idea
 
-# Accio dependency management
-Dependencies/
-.accio/
+Carthage/
 
-# fastlane
-#
-# It is recommended to not store the screenshots in the git repo.
-# Instead, use fastlane to re-generate the screenshots whenever they are needed.
-# For more information about the recommended setup visit:
-# https://docs.fastlane.tools/best-practices/source-control/#source-control
+ThirdParty/google-breakpad
 
-fastlane/report.xml
-fastlane/Preview.html
-fastlane/screenshots/**/*.png
-fastlane/test_output
+# Saved Sync credentials for tests.
+signedInUser.json
 
-# Code Injection
-#
-# After new code Injection tools there's a generated folder /iOSInjectionProject
-# https://github.com/johnno1962/injectionforxcode
 
-iOSInjectionProject/
+# Python
+__pycache__
+.pytest_cache
+*.pyc
+
+# SQLite
+*.db-shm
+*.db-wal
+
+# Node.js
+node_modules
